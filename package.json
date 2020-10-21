@@ -1,10 +1,31 @@
 {
-  "name": "dx-cli",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "yinqin",
-  "license": "MIT",
-  "devDependencies": {
+  "name": "dx-clis",
+  "version": "0.0.2",
+  "description": "dx-tools, react, add component by cli",
+  "main": "src/index.js",
+  "bin": {
+    "dx": "cli.js"
+  },
+  "dependencies": {
+    "change-case": "^4.1.1",
     "plop": "^2.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yinqindx/dx-cli.git"
+  },
+  "author": "yinqindx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yinqindx/dx-cli/issues"
+  },
+  "homepage": "https://github.com/yinqindx/dx-cli#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }
+ 

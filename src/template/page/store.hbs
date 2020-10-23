@@ -1,0 +1,16 @@
+import React from 'react'
+import { observable, action, useStrict, runInAction, computed } from 'mobx'
+import { get, post } from 'utils/fetch'
+import Api from 'api/api'
+
+class Store {
+  // !这里开始写你的状态
+  @observable {{ name}} = false 
+
+  // !这里开始写你的 action 
+  @action('方法描述') set{{name}} = async function (param) {
+    this.{{name}} = param
+  }
+}
+
+export default new Store()

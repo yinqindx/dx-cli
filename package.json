@@ -1,6 +1,6 @@
 {
   "name": "dx-clis",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "dx-tools, react, add component by cli",
   "main": "src/index.js",
   "bin": {

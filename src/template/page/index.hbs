@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import './index.less';
+
 
 import store from './store'
 import { observer } from 'mobx-react';
@@ -27,4 +29,4 @@ class {{name}} extends Component {
   isMobile: PropTypes.bool
 }
 
-export default {{name}}
+export default withRouter({{name}})

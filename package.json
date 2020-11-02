@@ -7,8 +7,14 @@
     "dx": "./bin/cli.js"
   },
   "dependencies": {
+    "ali-oss": "^6.11.2",
+    "axios": "^0.21.0",
+    "chalk": "^4.1.0",
     "change-case": "^4.1.1",
-    "plop": "^2.7.4"
+    "commander": "^6.2.0",
+    "lodash": "^4.17.20",
+    "plop": "^2.7.4",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -28,4 +34,3 @@
     "access": "public"
   }
 }
- 

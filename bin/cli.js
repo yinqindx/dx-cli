@@ -20,3 +20,7 @@ if (GENERATOR_COMMAND.includes(command)) {
     run
   );
 }
+
+if (command === 'p') {
+  require('../src/oss.js')
+}

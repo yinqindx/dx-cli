@@ -4,7 +4,7 @@
   "description": "dx-tools, react, add component by cli",
   "main": "src/index.js",
   "bin": {
-    "dx": "cli.js"
+    "dx": "./bin/cli.js"
   },
   "dependencies": {
     "change-case": "^4.1.1",

@@ -3,19 +3,30 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import './index.less';
 
-
 import store from './store'
 import { observer } from 'mobx-react';
 import classnames from 'classnames';
 
+{{#if withForm }}
+import { Form, Input, Button, Select, Row, Col, message, Spin, Modal } from 'antd';
+const FormItem = Form.Item;
+const Option = Select.Option
+const { Search } = Input
+{{else}}
+import { Button, Row, Col, message, Spin, Modal } from 'antd';
+{{/if}}
+
 @observer
 class {{name}} extends Component {
   constructor (props) {
-    super(props)
+    super(props);
   }
 
   render () {
-    const { isMobile } = this.props
+    const { isMobile } = this.props;
+    {{#if withForm }}
+    const { getFieldDecorator, getFieldsValue } = this.props.form;
+    {{/if}}
 
     return (
       <div className="{{kebabCase name}}">
@@ -29,4 +40,8 @@ class {{name}} extends Component {
   isMobile: PropTypes.bool
 }
 
+{{#if withForm }}
+export default withRouter(Form.create()(observer({{name}})))
+{{else}}
 export default withRouter({{name}})
+{{/if}}

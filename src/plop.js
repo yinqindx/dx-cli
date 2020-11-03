@@ -39,6 +39,12 @@ module.exports = function (plop) {
 				name: 'name',
 				message: 'page name please',
 			},
+			{
+				type: 'confirm',
+				name: 'withForm',
+				message: '页面是否添加表单？',
+				default: false
+			},
 		],
 		actions: [
 			{

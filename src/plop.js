@@ -1,5 +1,5 @@
 const path = require('path')
-const {paramCase, pascalCase} = require('change-case')
+const {paramCase, pascalCase, camelCase} = require('change-case')
 
 module.exports = function (plop) {
 	const cwd = process.cwd()
@@ -17,6 +17,13 @@ module.exports = function (plop) {
 		const name = paths[paths.length - 1]
 		console.log(name)
 		return pascalCase(name)
+	});
+
+	plop.setHelper('camelCase', (value) => {
+		const paths = value.split('/')
+		const name = paths[paths.length - 1]
+		console.log(name)
+		return camelCase(name)
 	});
 
 	plop.setGenerator('component', {

@@ -43,8 +43,8 @@ module.exports = function (plop) {
 			},
 			{
 				type: 'add',
-				path: component_path + '/{{name}}/index.less',
-				templateFile: 'template/component/index.less.hbs',
+				path: component_path + '/{{name}}/style.less',
+				templateFile: 'template/component/style.less.hbs',
 			},
 		],
 	})
@@ -77,8 +77,8 @@ module.exports = function (plop) {
 			},
 			{
 				type: 'add',
-				path: page_path + '/{{name}}/index.less',
-				templateFile: 'template/page/index.less.hbs',
+				path: page_path + '/{{name}}/style.less',
+				templateFile: 'template/page/style.less.hbs',
 			},
 		],
 	})

@@ -5,11 +5,11 @@ import Api from 'api/api'
 
 class Store {
   // !这里开始写你的状态
-  @observable {{ name}} = false 
+  @observable {{ kebabCase name}} = false 
 
   // !这里开始写你的 action 
-  @action('方法描述') set{{name}} = async function (param) {
-    this.{{name}} = param
+  @action('方法描述') set{{pascalCase name}} = async function (param) {
+    this.{{kebabCase name}} = param
   }
 }
 

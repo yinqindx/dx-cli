@@ -4,7 +4,7 @@ import './index.less';
 
 import classnames from 'classnames';
 
-class {{name}} extends Component {
+class {{pascalCase name}} extends Component {
   constructor (props) {
     super(props)
   }
@@ -12,14 +12,14 @@ class {{name}} extends Component {
   render () {
     return (
       <div className="{{kebabCase name}}">
-        {{name}}
+        {{pascalCase name}}
       </div>
     )
   }
 }
 
-{{name}}.propTypes = {
+{{pascalCase name}}.propTypes = {
   
 }
 
-export default {{name}}
+export default {{pascalCase name}}

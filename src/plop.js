@@ -1,12 +1,23 @@
 const path = require('path')
-const {paramCase} = require('change-case')
+const {paramCase, pascalCase} = require('change-case')
 
 module.exports = function (plop) {
 	const cwd = process.cwd()
 	const component_path = path.join(cwd, 'src/components')
 	const page_path = path.join(cwd, 'src/pages')
 
-	plop.setHelper('kebabCase', (value) => paramCase(value));
+	plop.setHelper('kebabCase', (value) => {
+		const paths = value.split('/')
+		const name = paths[paths.length - 1]
+		return paramCase(name)
+	});
+
+	plop.setHelper('pascalCase', (value) => {
+		const paths = value.split('/')
+		const name = paths[paths.length - 1]
+		console.log(name)
+		return pascalCase(name)
+	});
 
 	plop.setGenerator('component', {
 		description: '组件创建',

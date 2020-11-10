@@ -17,7 +17,7 @@ import { Button, Row, Col, message, Spin, Modal } from 'antd';
 {{/if}}
 
 @observer
-class {{name}} extends Component {
+class {{pascalCase name}} extends Component {
   constructor (props) {
     super(props);
   }
@@ -30,18 +30,18 @@ class {{name}} extends Component {
 
     return (
       <div className="{{kebabCase name}}">
-        {{name}}
+        {{pascalCase name}}
       </div>
     )
   }
 }
 
-{{name}}.propTypes = {
+{{pascalCase name}}.propTypes = {
   isMobile: PropTypes.bool
 }
 
 {{#if withForm }}
-export default withRouter(Form.create()(observer({{name}})))
+export default withRouter(Form.create()(observer({{pascalCase name}})))
 {{else}}
-export default withRouter({{name}})
+export default withRouter({{pascalCase name}})
 {{/if}}
